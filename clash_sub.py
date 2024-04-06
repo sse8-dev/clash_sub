@@ -366,4 +366,4 @@ if __name__ == '__main__':
     final_config = helper.new_config_data(mynodes, default_config)
 
     save_config(output_path, final_config)
-    print(f'文件已导出至 {config_path}')
+    print(f'文件已导出至 {output_path}')
