@@ -11,7 +11,7 @@ import geoip2.database
 
 def find_country(target_ip):
 # 指定 MaxMind 数据库文件路径
-    reader = geoip2.database.Reader('/root/jcvpsip/GeoLite2-Country.mmdb')
+    reader = geoip2.database.Reader('./GeoLite2-Country.mmdb')
 
 # 查询 IP 地址所属国家
     try:
@@ -64,7 +64,7 @@ def parse_vmess_link(link):
     return None,None
 
 def get_jms_config():
-    url = 'http://192.168.1.225/bigdata/bigdata.txt'
+    url = 'http://.....'
     response = requests.get(url)
     if response.status_code == 200:
         decoded_content = base64.b64decode(
@@ -119,14 +119,14 @@ def run():
     print("解析正常")
 
     # 配置文件路径
-    conf_file = '/var/www/ros/bigairport.rsc'
+    conf_file = '/var/www/ros/test.rsc'
 
     # 写入ROS配置文件
     with open(conf_file, 'w') as f:
         f.write("/ip firewall address-list\n")
-        f.write("remove [/ip firewall address-list find list=bigairport]\n")
+        f.write("remove [/ip firewall address-list find list=airport]\n")
         for entry in server_list:
-            f.write('add address=' + entry + ' list=bigairport\n')
+            f.write('add address=' + entry + ' list=airport\n')
         f.close()
 
     # 写入修改后的节点订阅文件
@@ -137,5 +137,4 @@ def run():
             temp_b64 += "vmess://" + base64.b64encode(temp_byte).decode() + '\n'
         file.write(base64.b64encode(temp_b64.encode()).decode())
         file.close()
-
 run()
