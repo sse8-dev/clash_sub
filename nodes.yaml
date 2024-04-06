@@ -1,0 +1,26 @@
+[
+  {
+    name: "mySite1", # 网站名称，仅用于日志输出
+    group: "高速节点", # 目标 proxy-groups 的代理组名
+    url: "raw", # Clash 配置文件的订阅 URL
+    exclusion: [],
+    inclusion: ["高速"], # 仅采纳包含这些关键词的节点
+    dedup: False # 是否基于节点入口 IP 地址进行去重
+  },
+  {
+    name: "mySite2", # 网站名称，仅用于日志输出
+    group: "普速节点", # 目标 proxy-groups 的代理组名
+    url: "raw", # Clash 配置文件的订阅 URL
+    exclusion: [],
+    inclusion: ["普速"], # 仅采纳包含这些关键词的节点
+    dedup: False # 是否基于节点入口 IP 地址进行去重
+  },
+  {
+    name: "mySite3", # 网站名称，仅用于日志输出
+    group: "下载节点", # 目标 proxy-groups 的代理组名
+    url: "raw", # Clash 配置文件的订阅 URL
+    exclusion: [],
+    inclusion: ["下载"], # 仅采纳包含这些关键词的节点
+    dedup: False # 是否基于节点入口 IP 地址进行去重
+  },
+]
