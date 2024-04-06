@@ -3,7 +3,7 @@
 import os, re, sys, json, base64, datetime
 import requests, yaml
 import urllib.parse
-from clash_helper import helper
+import helper
 
 def log(msg):
     time = datetime.datetime.now()
