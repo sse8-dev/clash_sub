@@ -2,8 +2,10 @@
 ## 说明 :
 本项目提供解析ss/ssr/v2ray/clashR/clash订阅链接为Clash配置文件的自动化脚本,供学习交流使用。
 ### 感谢：https://github.com/celetor/convert2clash
+* 上述程序不具体节点筛选功能
 ### 感谢：https://github.com/nonPointer/ClashHelper
-本程序结合了上面的两个程序代码，可以根据原始的BASE64节点，和自定义模板，直接生成本地配置文件，方便本地部署。
+* 上述程序不具备直接使用BASE64原始节点的功能
+本程序结合了上面的两个程序代码，可以直接根据原始的BASE64节点，和自定义模板，直接生成本地配置文件，结合cron，可以方便自动化本地部署。
 ```
 clash_sub.py中的参数 :
  1. sub_url=订阅地址（多个地址;隔开）
