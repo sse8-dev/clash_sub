@@ -340,9 +340,8 @@ def save_config(path, data):
 if __name__ == '__main__':
     # 订阅地址 多个地址用;隔开
     #sub_url = input('请输入订阅地址(多个地址用;隔开):')
-    sub_url = "http://127.0.0.1/bigdata/bigdata.b64"
+    sub_url = "http://127.0.0.1/test.b64"
     # 输出路径
-    # output_path = '/var/www/bigdata/clash_output.yaml'
     output_path = './out.yaml'
     # 规则策略(本地或远程)
     #config_url = 'https://cdn.jsdelivr.net/gh/celetor/convert2clash@main/config.yaml'
