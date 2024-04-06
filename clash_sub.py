@@ -360,6 +360,8 @@ if __name__ == '__main__':
     default_config = get_local_config(config_path)
     # 原来的处理函数
     # final_config = add_proxies_to_model(all_node_list, default_config)
+
+    # 新改写的处理流程
     mynodes = helper.get_last_nodes(middle_nodes)
     final_config = helper.new_config_data(mynodes, default_config)
 
