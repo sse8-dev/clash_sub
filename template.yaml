@@ -228,31 +228,11 @@ proxies:
     #   Host: v2ray.com # 填你的主机名
 
   #custom socks5
-  - name: "socks-cc"
-    type: socks5
-    server: 192.168.1.210
-    port: 1080
-
-  - name: "socks-hy"
-    type: socks5
-    server: 192.168.1.220
-    port: 1080
-
-  - name: "socks-hk70"
-    type: socks5
-    server: 192.168.1.240
-    port: 1080
 
 # 代理组策略
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
 proxy-groups:
   # 代理节点选择
-  - name: "自建节点"
-    type: url-test
-    proxies: [socks-cc,socks-hk70,socks-hy]
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-
   - name: "PROXY"
     type: select
     proxies: [高速节点,普速节点,下载节点,自建节点]
